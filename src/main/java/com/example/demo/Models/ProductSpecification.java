@@ -1,8 +1,6 @@
 package com.example.demo.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,5 +22,9 @@ public class ProductSpecification {
     private BigDecimal WeightKg;
     private int BatteryWh;
     private String OS;
+
+    @OneToOne
+    @JoinColumn(name = "product_Id")
+    private Product product;
 
 }
