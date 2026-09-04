@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -13,6 +15,7 @@ import java.math.BigDecimal;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "product_Id", nullable = false)
     private int ProductId;
 
     private String ProductName;
@@ -30,5 +33,8 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "brand_Id")
     private Brand brand;
+
+    @OneToMany(mappedBy = "product")
+    private List<ProductImage> productImages = new ArrayList<>();
 
 }
