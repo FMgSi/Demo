@@ -1,4 +1,4 @@
-package com.example.demo.Models;
+package com.example.demo.models;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 @Getter
 @Setter
 public class Order {
@@ -19,13 +19,13 @@ public class Order {
     @Column(name = "order_Id", nullable = false)
     private int OrderId;
 
-    private LocalDateTime OderDate;
-    private BigDecimal TotalAmount;
-    private String ShippingAddress;
-    private String PhoneNumber;
-    private String PaymentMethod;
-    private String PaymentStatus;
-    private String OrderStatus;
+    private LocalDateTime orderDate;
+    private BigDecimal totalAmount;
+    private String shippingAddress;
+    private String phoneNumber;
+    private String paymentMethod;
+    private String paymentStatus;
+    private String orderStatus;
 
     @ManyToOne
     @JoinColumn(name = "user_Id")

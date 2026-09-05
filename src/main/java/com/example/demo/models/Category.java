@@ -1,4 +1,4 @@
-package com.example.demo.Models;
+package com.example.demo.models;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -15,10 +15,10 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "category_Id", nullable = false, length = 150)
-    private int CategoryId;
+    @Column(name = "category_Id", nullable = false)
+    private int categoryId;
 
-    private String CategoryName;
+    private String categoryName;
 
     @OneToMany(mappedBy = "category")
     private List<Product> products = new ArrayList<>();

@@ -1,4 +1,4 @@
-package com.example.demo.Models;
+package com.example.demo.models;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -13,11 +13,11 @@ import java.math.BigDecimal;
 public class OrderDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "order_Detaild_Id", nullable = false)
-    private int OrderDetailId;
+    @Column(name = "order_Detail_Id", nullable = false)
+    private int orderDetailId;
 
-    private int Quantity;
-    private BigDecimal UnitPrice;
+    private int quantity;
+    private BigDecimal unitPrice;
 
     @ManyToOne
     @JoinColumn(name = "order_Id")

@@ -1,4 +1,4 @@
-package com.example.demo.Models;
+package com.example.demo.models;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -14,12 +14,12 @@ import java.util.List;
 public class Brand {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "brand_Id", nullable = false, length = 150)
-    private int BrandId;
+    @Column(name = "brand_Id", nullable = false)
+    private int brandId;
 
-    private String BrandName;
+    private String brandName;
 
-    private String LogoUrl;
+    private String logoUrl;
 
     @OneToMany(mappedBy = "brand")
     private List<Product> products = new ArrayList<>();

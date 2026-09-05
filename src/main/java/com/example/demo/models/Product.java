@@ -1,4 +1,4 @@
-package com.example.demo.Models;
+package com.example.demo.models;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -16,15 +16,15 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_Id", nullable = false)
-    private int ProductId;
+    private int productId;
 
-    private String ProductName;
-    private BigDecimal Price;
-    private BigDecimal DiscountPrice;
-    private int StockQuantity;
-    private String ThumbnailUrl;
-    private String Description;
-    private boolean IsActive;
+    private String productName;
+    private BigDecimal price;
+    private BigDecimal discountPrice;
+    private int stockQuantity;
+    private String thumbnailUrl;
+    private String description;
+    private boolean isActive;
 
     @ManyToOne
     @JoinColumn(name = "category_Id")
