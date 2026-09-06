@@ -18,7 +18,7 @@ public class ProductRequest {
     private Integer brandId;
     private Integer categoryId;
 
-    private ProductSpecificationRequest productspecificationRequest;
+    private ProductSpecificationRequest specification;
 
     @Getter
     @Setter
