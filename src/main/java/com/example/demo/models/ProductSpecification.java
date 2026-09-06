@@ -14,7 +14,7 @@ public class ProductSpecification {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_Specification_Id")
-    private int productSpecificationId;
+    private Integer productSpecificationId;
 
     private String cpu;
     private int ramGB;

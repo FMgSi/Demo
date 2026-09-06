@@ -39,7 +39,17 @@ public class ProductService {
         if (productRequest.getSpecificationRequest() != null){
             ProductSpecification productSpecification = new ProductSpecification();
             productSpecification.setCpu(productRequest.getSpecificationRequest().getCpu());
-
+            productSpecification.setGpu(productRequest.getSpecificationRequest().getGpu());
+            productSpecification.setOs(productRequest.getSpecificationRequest().getOs());
+            productSpecification.setRamGB(productRequest.getSpecificationRequest().getRamGB());
+            productSpecification.setBatteryWh(productRequest.getSpecificationRequest().getBatteryWh());
+            productSpecification.setRefreshRateHz(productRequest.getSpecificationRequest().getRefreshRateHz());
+            productSpecification.setScreenSizeInch(productRequest.getSpecificationRequest().getScreenSizeInch());
+            productSpecification.setStorageGB(productRequest.getSpecificationRequest().getStorageGB());
+            productSpecification.setStorageType(productRequest.getSpecificationRequest().getStorageType());
+            productSpecification.setWeightKg(productRequest.getSpecificationRequest().getWeightKg());
+            productSpecification.setProduct(product);
+            product.setProductSpecification(productSpecification);
         }
         return productRepository.save(product);
     }

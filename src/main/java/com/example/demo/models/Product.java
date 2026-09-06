@@ -38,9 +38,7 @@ public class Product {
     @com.fasterxml.jackson.annotation.JsonIgnore
     private List<ProductImage> productImages = new ArrayList<>();
 
-    @OneToOne(orphanRemoval = true, cascade = CascadeType.ALL)
-    @com.fasterxml.jackson.annotation.JsonIgnore
-    @JoinColumn(name = "product_Specification_Id", referencedColumnName = "id")
+    @OneToOne(orphanRemoval = true, cascade = CascadeType.ALL, mappedBy = "product")
     private ProductSpecification productSpecification;
 
     @OneToMany(mappedBy = "product")
