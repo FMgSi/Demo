@@ -20,5 +20,6 @@ public class Role {
     private String roleName;
 
     @OneToMany(mappedBy = "role")
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private List<User> users = new ArrayList<>();
 }

@@ -32,6 +32,7 @@ public class Order {
     private User user;
 
     @OneToMany(mappedBy = "order")
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private List<OrderDetail> orderDetails = new ArrayList<>();
 
 }

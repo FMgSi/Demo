@@ -35,14 +35,19 @@ public class Product {
     private Brand brand;
 
     @OneToMany(mappedBy = "product")
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private List<ProductImage> productImages = new ArrayList<>();
 
-    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL)
+    @OneToOne(orphanRemoval = true, cascade = CascadeType.ALL)
+    @com.fasterxml.jackson.annotation.JsonIgnore
+    @JoinColumn(name = "product_Specification_Id", referencedColumnName = "id")
     private ProductSpecification productSpecification;
 
     @OneToMany(mappedBy = "product")
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private List<CartItem> cartItems = new ArrayList<>();
 
     @OneToMany(mappedBy = "product")
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private List<OrderDetail> orderDetails = new ArrayList<>();
 }

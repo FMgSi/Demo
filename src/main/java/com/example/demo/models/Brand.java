@@ -22,5 +22,6 @@ public class Brand {
     private String logoUrl;
 
     @OneToMany(mappedBy = "brand")
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private List<Product> products = new ArrayList<>();
 }

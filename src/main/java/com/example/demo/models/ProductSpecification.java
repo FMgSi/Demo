@@ -27,8 +27,9 @@ public class ProductSpecification {
     private int batteryWh;
     private String os;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "product_Id")
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private Product product;
 
 }
