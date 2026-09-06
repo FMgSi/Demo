@@ -1,6 +1,5 @@
 package com.example.demo.dto;
 
-import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,10 +18,11 @@ public class ProductRequest {
     private Integer brandId;
     private Integer categoryId;
 
-    private SpecificationRequest specificationRequest;
+    private ProductSpecificationRequest productspecificationRequest;
+
     @Getter
     @Setter
-    public static class SpecificationRequest{
+    public static class ProductSpecificationRequest {
         private String cpu;
         private int ramGB;
         private int storageGB;

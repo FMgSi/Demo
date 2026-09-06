@@ -36,18 +36,18 @@ public class ProductService {
         product.setBrand(brand);
         product.setCategory(category);
 
-        if (productRequest.getSpecificationRequest() != null){
+        if (productRequest.getProductspecificationRequest() != null){
             ProductSpecification productSpecification = new ProductSpecification();
-            productSpecification.setCpu(productRequest.getSpecificationRequest().getCpu());
-            productSpecification.setGpu(productRequest.getSpecificationRequest().getGpu());
-            productSpecification.setOs(productRequest.getSpecificationRequest().getOs());
-            productSpecification.setRamGB(productRequest.getSpecificationRequest().getRamGB());
-            productSpecification.setBatteryWh(productRequest.getSpecificationRequest().getBatteryWh());
-            productSpecification.setRefreshRateHz(productRequest.getSpecificationRequest().getRefreshRateHz());
-            productSpecification.setScreenSizeInch(productRequest.getSpecificationRequest().getScreenSizeInch());
-            productSpecification.setStorageGB(productRequest.getSpecificationRequest().getStorageGB());
-            productSpecification.setStorageType(productRequest.getSpecificationRequest().getStorageType());
-            productSpecification.setWeightKg(productRequest.getSpecificationRequest().getWeightKg());
+            productSpecification.setCpu(productRequest.getProductspecificationRequest().getCpu());
+            productSpecification.setGpu(productRequest.getProductspecificationRequest().getGpu());
+            productSpecification.setOs(productRequest.getProductspecificationRequest().getOs());
+            productSpecification.setRamGB(productRequest.getProductspecificationRequest().getRamGB());
+            productSpecification.setBatteryWh(productRequest.getProductspecificationRequest().getBatteryWh());
+            productSpecification.setRefreshRateHz(productRequest.getProductspecificationRequest().getRefreshRateHz());
+            productSpecification.setScreenSizeInch(productRequest.getProductspecificationRequest().getScreenSizeInch());
+            productSpecification.setStorageGB(productRequest.getProductspecificationRequest().getStorageGB());
+            productSpecification.setStorageType(productRequest.getProductspecificationRequest().getStorageType());
+            productSpecification.setWeightKg(productRequest.getProductspecificationRequest().getWeightKg());
             productSpecification.setProduct(product);
             product.setProductSpecification(productSpecification);
         }
